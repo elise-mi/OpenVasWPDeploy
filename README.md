@@ -24,7 +24,7 @@
 12. **Télécharger ce dépôt** en allant sur le site suivant le télécharger : https://github.com/Benji63/OpenVasWPDeploy
 13. **Puis le dézipper** dans le dossier de votre choix !
 14. **Générer une paire de clées SSH** en exécutant la commande suivante dans un **Powershell** en administrateur :
-ssh-keygen -t rsa -b 4096 -f $HOME\.ssh\id_rsa
+ssh-keygen -t rsa -b 4096 -f C:\Users\[path]\.ssh\id_rsa
 
 15. Si code d'erreur il faudra créer un dossier dans votre répertoire utilisateur avec comme nom : `.ssh`
 
@@ -42,7 +42,7 @@ ssh-keygen -t rsa -b 4096 -f $HOME\.ssh\id_rsa
 
 
 ```
- wget -O-https://www.virtualbox.org/download/oracle_vbox_2016.asc | sudo gpg --dearmor --yes --output /usr/share/keyrings/oracle-virtualbox-2016.gpg
+ wget -O- https://www.virtualbox.org/download/oracle_vbox_2016.asc | sudo gpg --dearmor --yes --output /usr/share/keyrings/oracle-virtualbox-2016.gpg
 ```
 
 
@@ -94,9 +94,9 @@ sudo apt update | apt upgrade
 8. Installer enfin le pack d'extension de VirtualBox : 
  
 ```
-sudo apt install virtualbox-ext-pack Relancer virtual box elles est installée
+sudo apt install virtualbox-ext-pack 
 ```
-
+Relancer virtual box, elle est installée.
 9. Télécharger le certificat depuis le naviguateur :  (https://curl.se/ca/cacert-2023-05-30.pem)
 
 10. **Depuis un CMD** mettre le path jusqu au certificat en tant que variable d'environnement
@@ -107,7 +107,7 @@ SSL_CERT_FILE=PATHTOCERT
 11. **Générer la paire de clée SSH depuis un cmd**
 
 ```
-ssh-keygen -t rsa -b 4096 -f $HOME\.ssh\id_rsa
+ssh-keygen -t rsa -b 4096 -f $HOME/.ssh/id_rsa
 ```
 12. Intaller Git
 
